@@ -1,4 +1,4 @@
-        {
+{
             "startingTeamUrn": "live:dota:carp:team:ae:9608610",
             "currentTeamUrn": "live:dota:carp:team:ae:9602130",
             "teams": [
@@ -140,6 +140,3 @@
                 }
             ]
         }
-    ],
-    "$id": "http://schemas.bayesesports.com/live_data/dota/dota2_bayes_carp/snapshot/team/update"
-}
