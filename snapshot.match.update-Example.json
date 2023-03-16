@@ -1,0 +1,604 @@
+        {
+            "references": {
+                "VALVE_DOTA_MATCH_ID": "1039339301"
+            },
+            "matchStatus": {
+                "matchState": "IN_PROGRESS",
+                "paused": false
+            },
+            "seriesStatus": {
+                "perid": "esports:match:fa832de7-fb79-540b-c510-70c979889b08",
+                "seriesCurrent": 2,
+                "seriesMax": 3,
+                "seriesType": "BEST_OF",
+                "seriesScores": {
+                    "live:dota:carp:team:ae:8920139": 0,
+                    "live:dota:carp:team:ae:9371094": 1
+                }
+            },
+            "roshanStatus": {
+                "roshanState": "PHASE_ONE",
+                "respawnTimeInMillis": 192772
+            },
+            "startedAt": "2021-12-21T23:02:04.614406Z",
+            "endedAt": null,
+            "gameTime": 1497944,
+            "gameOver": false,
+            "winningTeamUrn": null,
+            "radiant": {
+                "liveDataUrn": "live:dota:carp:team:ae:9371094",
+                "faction": "RADIANT",
+                "references": {
+                    "VALVE_DOTA_TEAM_ID": "6790976"
+                },
+                "mapWins": 1,
+                "players": [
+                    {
+                        "liveDataUrn": "live:dota:carp:player:86269899999896268",
+                        "playerName": "player1",
+                        "references": {
+                            "STEAM_ID_64": "86269899999896268"
+                        },
+                        "heroName": "npc_dota_hero_wisp",
+                        "heroId": 91,
+                        "itemsInventory": [
+                            {
+                                "name": "item_magic_stick",
+                                "itemId": 34,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_urn_of_shadows",
+                                "itemId": 92,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_soul_ring",
+                                "itemId": 178,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_dust",
+                                "itemId": 40,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_vitality_booster",
+                                "itemId": 61,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_headdress",
+                                "itemId": 94,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_tpscroll",
+                                "itemId": 46,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsBackpack": [],
+                        "itemsStash": [],
+                        "itemsBear": [],
+                        "itemNeutral": {
+                            "name": "item_mysterious_hat",
+                            "itemId": 589,
+                            "meta": {},
+                            "cooldownUntil": 0
+                        },
+                        "abilities": [
+                            {
+                                "name": "wisp_tether",
+                                "abilId": 5485,
+                                "level": 4,
+                                "cooldownUntil": 8.1999855,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            }
+                        ],
+                        "position": {
+                            "x": 7322.0312,
+                            "y": 5753.9062,
+                            "z": 128
+                        },
+                        "level": 11,
+                        "alive": true,
+                        "kills": 0,
+                        "deaths": 3,
+                        "assists": 2,
+                        "lastHits": 13,
+                        "lastHitStreak": 0,
+                        "denies": 6,
+                        "goldCurrent": 834,
+                        "goldEarned": 4305,
+                        "networth": 4159,
+                        "xp": 6847,
+                        "healingDone": 4892,
+                        "runesPickedUp": 2,
+                        "buybackCost": 420,
+                        "roshanKills": 0,
+                        "buybackCooldown": 0,
+                        "buybackCooldownRemaining": null,
+                        "respawnTimeRemaining": null,
+                        "health": 1456,
+                        "healthMax": 1625,
+                        "healthRegen": 8.248932,
+                        "mana": 467,
+                        "manaMax": 579,
+                        "manaRegen": 3.4792137,
+                        "agility": 32.000004,
+                        "strength": 55,
+                        "intelligence": 42.000008,
+                        "buybackLastUsed": null,
+                        "bkbChargesUsed": null,
+                        "magicResist": 25,
+                        "movementSpeed": 320,
+                        "visionDaytime": 800,
+                        "visionNighttime": 0,
+                        "visibleByEnemy": false,
+                        "reliableGold": 834,
+                        "heroKillGold": 130,
+                        "creepKillGold": 184,
+                        "unreliableGold": 0,
+                        "towerKills": 1,
+                        "killStreak": null,
+                        "bestKillStreak": null
+                    }
+                ],
+                "heroKills": 6,
+                "towerKills": 2,
+                "barracksKills": 0,
+                "roshanKills": 1,
+                "shrineKills": null,
+                "reliableGold": 3627,
+                "unreliableGold": 4341,
+                "heroKillGold": 1891,
+                "creepKillGold": 15939,
+                "killStreak": 3,
+                "bestKillStreak": 3
+            },
+            "dire": {
+                "liveDataUrn": "live:dota:carp:team:ae:8920139",
+                "faction": "DIRE",
+                "references": {
+                    "VALVE_DOTA_TEAM_ID": "2709072"
+                },
+                "mapWins": 0,
+                "players": [
+                    {
+                        "liveDataUrn": "live:dota:carp:player:09669098089096690",
+                        "playerName": "player2",
+                        "references": {
+                            "STEAM_ID_64": "09669098089096690"
+                        },
+                        "heroName": "npc_dota_hero_winter_wyvern",
+                        "heroId": 91,
+                        "itemsInventory": [
+                            {
+                                "name": "item_ring_of_basilius",
+                                "itemId": 88,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_ward_observer",
+                                "itemId": 42,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_boots",
+                                "itemId": 29,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_witch_blade",
+                                "itemId": 534,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_wind_lace",
+                                "itemId": 244,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsBackpack": [
+                            {
+                                "name": "item_smoke_of_deceit",
+                                "itemId": 188,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsStash": [],
+                        "itemsBear": [],
+                        "itemNeutral": {
+                            "name": "item_grove_bow",
+                            "itemId": 288,
+                            "meta": {},
+                            "cooldownUntil": 0
+                        },
+                        "abilities": [
+                            {
+                                "name": "abyssal_underlord_portal_warp",
+                                "abilId": 842,
+                                "level": 1,
+                                "cooldownUntil": 0,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            }
+                        ],
+                        "position": {
+                            "x": 4213.1875,
+                            "y": 9799.156,
+                            "z": 128
+                        },
+                        "level": 13,
+                        "alive": true,
+                        "kills": 0,
+                        "deaths": 3,
+                        "assists": 7,
+                        "lastHits": 34,
+                        "lastHitStreak": 0,
+                        "denies": 1,
+                        "goldCurrent": 151,
+                        "goldEarned": 5175,
+                        "networth": 4226,
+                        "xp": 9541,
+                        "healingDone": 938,
+                        "runesPickedUp": 3,
+                        "buybackCost": 426,
+                        "roshanKills": 0,
+                        "buybackCooldown": 0,
+                        "buybackCooldownRemaining": null,
+                        "respawnTimeRemaining": null,
+                        "health": 1071,
+                        "healthMax": 1300,
+                        "healthRegen": 5.7689896,
+                        "mana": 578,
+                        "manaMax": 1071,
+                        "manaRegen": 5.627781,
+                        "agility": 36.40001,
+                        "strength": 55.19999,
+                        "intelligence": 83.19999,
+                        "buybackLastUsed": null,
+                        "bkbChargesUsed": null,
+                        "magicResist": 25,
+                        "movementSpeed": 285,
+                        "visionDaytime": 800,
+                        "visionNighttime": 0,
+                        "visibleByEnemy": false,
+                        "reliableGold": 150,
+                        "heroKillGold": 445,
+                        "creepKillGold": 656,
+                        "unreliableGold": 1,
+                        "towerKills": 0,
+                        "killStreak": null,
+                        "bestKillStreak": null
+                    }
+                ],
+                "heroKills": 12,
+                "towerKills": 3,
+                "barracksKills": 0,
+                "roshanKills": 0,
+                "shrineKills": null,
+                "reliableGold": 1257,
+                "unreliableGold": 3013,
+                "heroKillGold": 4830,
+                "creepKillGold": 17519,
+                "killStreak": 4,
+                "bestKillStreak": 4
+            },
+            "daytime": true,
+            "radiantNetworthAdvantage": -3122
+        }
+    ],
+    "$id": "http://schemas.bayesesports.com/live_data/dota/dota2_bayes_carp/snapshot/match/update"
+}

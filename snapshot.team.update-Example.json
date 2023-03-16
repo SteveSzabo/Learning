@@ -1,0 +1,145 @@
+        {
+            "startingTeamUrn": "live:dota:carp:team:ae:9608610",
+            "currentTeamUrn": "live:dota:carp:team:ae:9602130",
+            "teams": [
+                {
+                    "liveDataTeamUrn": "live:dota:carp:team:ae:9608610",
+                    "faction": "RADIANT",
+                    "players": [
+                        {
+                            "liveDataUrn": "live:dota:carp:player:59137795159773195",
+                            "references": {
+                                "STEAM_ID_64": "59137795159773195"
+                            },
+                            "name": "player11",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:33208198189180233",
+                            "references": {
+                                "STEAM_ID_64": "33208198189180233"
+                            },
+                            "name": "player12",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:03090990009909030",
+                            "references": {
+                                "STEAM_ID_64": "03090990009909030"
+                            },
+                            "name": "player13",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:89637994049973698",
+                            "references": {
+                                "STEAM_ID_64": "89637994049973698"
+                            },
+                            "name": "player14",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:10003793139730001",
+                            "references": {
+                                "STEAM_ID_64": "10003793139730001"
+                            },
+                            "name": "player15",
+                            "heroId": 0,
+                            "heroName": null
+                        }
+                    ],
+                    "references": {
+                        "VALVE_DOTA_TEAM_ID": "9094909"
+                    },
+                    "extraTimeInMillis": 130000,
+                    "picks": [
+                        {
+                            "heroId": 128
+                        }
+                    ],
+                    "bans": [
+                        {
+                            "heroId": 87
+                        },
+                        {
+                            "heroId": 3
+                        }
+                    ]
+                },
+                {
+                    "liveDataTeamUrn": "live:dota:carp:team:ae:9602130",
+                    "faction": "DIRE",
+                    "players": [
+                        {
+                            "liveDataUrn": "live:dota:carp:player:06368193139186360",
+                            "references": {
+                                "STEAM_ID_64": "06368193139186360"
+                            },
+                            "name": "player21",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:39200490109400293",
+                            "references": {
+                                "STEAM_ID_64": "39200490109400293"
+                            },
+                            "name": "player22",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:66495495159459466",
+                            "references": {
+                                "STEAM_ID_64": "66495495159459466"
+                            },
+                            "name": "player23",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:10203697179630201",
+                            "references": {
+                                "STEAM_ID_64": "10203697179630201"
+                            },
+                            "name": "player24",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:09705098189050790",
+                            "references": {
+                                "STEAM_ID_64": "09705098189050790"
+                            },
+                            "name": "player25",
+                            "heroId": 0,
+                            "heroName": null
+                        }
+                    ],
+                    "references": {
+                        "VALVE_DOTA_TEAM_ID": "9101019"
+                    },
+                    "extraTimeInMillis": 110900,
+                    "picks": [
+                        {
+                            "heroId": 16
+                        }
+                    ],
+                    "bans": [
+                        {
+                            "heroId": 88
+                        },
+                        {
+                            "heroId": 23
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$id": "http://schemas.bayesesports.com/live_data/dota/dota2_bayes_carp/snapshot/team/update"
+}
