@@ -1,0 +1,399 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "currentTeamUrn": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Reference URN of the team that is currently choosing a hero to ban/pick."
+        },
+        "startingTeamUrn": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Reference URN of the team that made the first decision in the drafting phase."
+        },
+        "teams": {
+            "description": "Current information about the teams.",
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "bans": {
+                        "description": "List of hero IDs the team banned.",
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "heroId": {
+                                    "type": "integer",
+                                    "description": "Banned hero internal ID."
+                                }
+                            },
+                            "title": "BannedHero",
+                            "examples": [
+                                {
+                                    "heroId": 87
+                                }
+                            ],
+                            "description": "List of hero IDs the team banned."
+                        }
+                    },
+                    "extraTimeInMillis": {
+                        "type": "integer",
+                        "description": "Total amount of extra time the team has left for this drafting phase."
+                    },
+                    "faction": {
+                        "anyOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string",
+                                "enum": [
+                                    "RADIANT",
+                                    "DIRE",
+                                    "UNKNOWN"
+                                ],
+                                "title": "Faction"
+                            }
+                        ],
+                        "description": "Team faction, e.g. RADIANT, DIRE."
+                    },
+                    "liveDataTeamUrn": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Team reference URN."
+                    },
+                    "picks": {
+                        "description": "List of hero IDs the team picked.",
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "heroId": {
+                                    "type": "integer",
+                                    "description": "Picked hero internal ID."
+                                }
+                            },
+                            "title": "PickedHero",
+                            "examples": [
+                                {
+                                    "heroId": 128
+                                }
+                            ],
+                            "description": "List of hero IDs the team picked."
+                        }
+                    },
+                    "players": {
+                        "description": "List of team players.",
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "heroId": {
+                                    "type": "integer",
+                                    "description": "Player internal hero ID."
+                                },
+                                "heroName": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Player internal hero name."
+                                },
+                                "liveDataUrn": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "The player reference URN."
+                                },
+                                "name": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Player name."
+                                },
+                                "references": {
+                                    "type": [
+                                        "object",
+                                        "null"
+                                    ],
+                                    "patternProperties": {
+                                        "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "description": "Reference IDs of the player in external services."
+                                }
+                            },
+                            "title": "DraftPlayer",
+                            "examples": [
+                                {
+                                    "liveDataUrn": "live:dota:carp:player:33208198189180233",
+                                    "references": {
+                                        "STEAM_ID_64": "33208198189180233"
+                                    },
+                                    "name": "player1",
+                                    "heroId": 51,
+                                    "heroName": "npc_dota_hero_rattletrap"
+                                }
+                            ],
+                            "description": "List of team players."
+                        }
+                    },
+                    "references": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "patternProperties": {
+                            "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                                "type": "string"
+                            }
+                        },
+                        "description": "Reference IDs of the team in external services."
+                    }
+                },
+                "title": "DraftTeam",
+                "examples": [
+                    {
+                        "liveDataTeamUrn": "live:dota:carp:team:ae:9608610",
+                        "faction": "RADIANT",
+                        "players": [
+                            {
+                                "liveDataUrn": "live:dota:carp:player:59137795159773195",
+                                "references": {
+                                    "STEAM_ID_64": "59137795159773195"
+                                },
+                                "name": "player1",
+                                "heroId": 0,
+                                "heroName": null
+                            },
+                            {
+                                "liveDataUrn": "live:dota:carp:player:33208198189180233",
+                                "references": {
+                                    "STEAM_ID_64": "33208198189180233"
+                                },
+                                "name": "player2",
+                                "heroId": 0,
+                                "heroName": null
+                            },
+                            {
+                                "liveDataUrn": "live:dota:carp:player:03090990009909030",
+                                "references": {
+                                    "STEAM_ID_64": "03090990009909030"
+                                },
+                                "name": "player3",
+                                "heroId": 0,
+                                "heroName": null
+                            },
+                            {
+                                "liveDataUrn": "live:dota:carp:player:89637994049973698",
+                                "references": {
+                                    "STEAM_ID_64": "89637994049973698"
+                                },
+                                "name": "player4",
+                                "heroId": 0,
+                                "heroName": null
+                            },
+                            {
+                                "liveDataUrn": "live:dota:carp:player:10003793139730001",
+                                "references": {
+                                    "STEAM_ID_64": "10003793139730001"
+                                },
+                                "name": "player5",
+                                "heroId": 0,
+                                "heroName": null
+                            }
+                        ],
+                        "references": {
+                            "VALVE_DOTA_TEAM_ID": "9094909"
+                        },
+                        "extraTimeInMillis": 130000,
+                        "picks": [
+                            {
+                                "heroId": 128
+                            }
+                        ],
+                        "bans": [
+                            {
+                                "heroId": 87
+                            },
+                            {
+                                "heroId": 3
+                            }
+                        ]
+                    }
+                ],
+                "description": "Current information about the teams."
+            }
+        }
+    },
+    "title": "SNAPSHOT/TEAM/UPDATE",
+    "description": "This message is sent when a team picked or banned a hero during the drafting phase.",
+    "examples": [
+        {
+            "startingTeamUrn": "live:dota:carp:team:ae:9608610",
+            "currentTeamUrn": "live:dota:carp:team:ae:9602130",
+            "teams": [
+                {
+                    "liveDataTeamUrn": "live:dota:carp:team:ae:9608610",
+                    "faction": "RADIANT",
+                    "players": [
+                        {
+                            "liveDataUrn": "live:dota:carp:player:59137795159773195",
+                            "references": {
+                                "STEAM_ID_64": "59137795159773195"
+                            },
+                            "name": "player11",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:33208198189180233",
+                            "references": {
+                                "STEAM_ID_64": "33208198189180233"
+                            },
+                            "name": "player12",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:03090990009909030",
+                            "references": {
+                                "STEAM_ID_64": "03090990009909030"
+                            },
+                            "name": "player13",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:89637994049973698",
+                            "references": {
+                                "STEAM_ID_64": "89637994049973698"
+                            },
+                            "name": "player14",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:10003793139730001",
+                            "references": {
+                                "STEAM_ID_64": "10003793139730001"
+                            },
+                            "name": "player15",
+                            "heroId": 0,
+                            "heroName": null
+                        }
+                    ],
+                    "references": {
+                        "VALVE_DOTA_TEAM_ID": "9094909"
+                    },
+                    "extraTimeInMillis": 130000,
+                    "picks": [
+                        {
+                            "heroId": 128
+                        }
+                    ],
+                    "bans": [
+                        {
+                            "heroId": 87
+                        },
+                        {
+                            "heroId": 3
+                        }
+                    ]
+                },
+                {
+                    "liveDataTeamUrn": "live:dota:carp:team:ae:9602130",
+                    "faction": "DIRE",
+                    "players": [
+                        {
+                            "liveDataUrn": "live:dota:carp:player:06368193139186360",
+                            "references": {
+                                "STEAM_ID_64": "06368193139186360"
+                            },
+                            "name": "player21",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:39200490109400293",
+                            "references": {
+                                "STEAM_ID_64": "39200490109400293"
+                            },
+                            "name": "player22",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:66495495159459466",
+                            "references": {
+                                "STEAM_ID_64": "66495495159459466"
+                            },
+                            "name": "player23",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:10203697179630201",
+                            "references": {
+                                "STEAM_ID_64": "10203697179630201"
+                            },
+                            "name": "player24",
+                            "heroId": 0,
+                            "heroName": null
+                        },
+                        {
+                            "liveDataUrn": "live:dota:carp:player:09705098189050790",
+                            "references": {
+                                "STEAM_ID_64": "09705098189050790"
+                            },
+                            "name": "player25",
+                            "heroId": 0,
+                            "heroName": null
+                        }
+                    ],
+                    "references": {
+                        "VALVE_DOTA_TEAM_ID": "9101019"
+                    },
+                    "extraTimeInMillis": 110900,
+                    "picks": [
+                        {
+                            "heroId": 16
+                        }
+                    ],
+                    "bans": [
+                        {
+                            "heroId": 88
+                        },
+                        {
+                            "heroId": 23
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$id": "http://schemas.bayesesports.com/live_data/dota/dota2_bayes_carp/snapshot/team/update"
+}

@@ -1,0 +1,2357 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "type": "object",
+    "properties": {
+        "daytime": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "description": "Indicates whether the game is currently in daytime phase."
+        },
+        "dire": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "barracksKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of barracks the team members destroyed during the game."
+                },
+                "bestKillStreak": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The highest kill streak value achieved among the team members during the game so far."
+                },
+                "creepKillGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of gold the team members earned for killing creeps."
+                },
+                "faction": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "enum": [
+                                "RADIANT",
+                                "DIRE",
+                                "UNKNOWN"
+                            ],
+                            "title": "Faction"
+                        }
+                    ],
+                    "description": "The team faction, e.g. RADIANT, DIRE."
+                },
+                "heroKillGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of gold the team members earned for killing heroes."
+                },
+                "heroKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of heroes the team members killed during the game."
+                },
+                "killStreak": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The highest current kill streak value among the team members."
+                },
+                "liveDataUrn": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The team reference URN."
+                },
+                "mapWins": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of times the team won the game in current match series."
+                },
+                "players": {
+                    "description": "List of team players.",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "abilities": {
+                                "description": "List of the player's abilities.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "abilId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Ability internal ID."
+                                        },
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the ability cooldown."
+                                        },
+                                        "lastUsedAt": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "The ingame clock's time in milliseconds of when the ability was last used."
+                                        },
+                                        "level": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Current ability level."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Ability name."
+                                        }
+                                    },
+                                    "title": "AbilityState",
+                                    "description": "List of the player's abilities."
+                                }
+                            },
+                            "agility": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current agility value."
+                            },
+                            "alive": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "description": "Indicates whether the player's hero is currently alive."
+                            },
+                            "assists": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of assists the player performed during the game."
+                            },
+                            "bestKillStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's best kill streak during the game."
+                            },
+                            "bkbChargesUsed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "buybackCooldown": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Absolute Game time when buyback is next available.",
+                                "deprecated": true
+                            },
+                            "buybackCooldownRemaining": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Seconds until buyback becomes available."
+                            },
+                            "buybackCost": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current buyback cost of the player's hero."
+                            },
+                            "buybackLastUsed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "creepKillGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player earned for killing creeps."
+                            },
+                            "deaths": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of times the player died during the game."
+                            },
+                            "denies": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of denies the player performed during the game."
+                            },
+                            "goldCurrent": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current gold balance."
+                            },
+                            "goldEarned": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player had earned during the game."
+                            },
+                            "healingDone": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total number of times the player healed."
+                            },
+                            "health": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current health value."
+                            },
+                            "healthMax": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero max health value."
+                            },
+                            "healthRegen": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero health regen rate."
+                            },
+                            "heroId": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero internal ID."
+                            },
+                            "heroKillGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player earned for killing heroes."
+                            },
+                            "heroName": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player's hero name."
+                            },
+                            "intelligence": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current intelligence value."
+                            },
+                            "itemNeutral": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "properties": {
+                                    "cooldownUntil": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ],
+                                        "description": "Number of seconds remaining until the item cooldown."
+                                    },
+                                    "itemId": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "Internal item ID."
+                                    },
+                                    "meta": {
+                                        "type": [
+                                            "object",
+                                            "null"
+                                        ],
+                                        "additionalProperties": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "name": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "description": "Item name."
+                                    }
+                                },
+                                "title": "ItemState",
+                                "description": "Information about neutral item the player has currently equipped."
+                            },
+                            "itemsBackpack": {
+                                "description": "List of items the player currently has in their backpack.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their backpack."
+                                }
+                            },
+                            "itemsBear": {
+                                "description": "This field is currently unused.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "This field is currently unused."
+                                }
+                            },
+                            "itemsInventory": {
+                                "description": "List of items the player currently has in their inventory.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their inventory."
+                                }
+                            },
+                            "itemsStash": {
+                                "description": "List of items the player currently has in their stash.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their stash."
+                                }
+                            },
+                            "killStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current kill streak."
+                            },
+                            "kills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of enemy hero kills the player performed during the game."
+                            },
+                            "lastHitStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current last hit streak."
+                            },
+                            "lastHits": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of last hits the player performed during the game."
+                            },
+                            "level": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current level."
+                            },
+                            "liveDataUrn": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player reference URN."
+                            },
+                            "magicResist": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current magic resist value."
+                            },
+                            "mana": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current mana value."
+                            },
+                            "manaMax": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero max mana value."
+                            },
+                            "manaRegen": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero mana regen rate."
+                            },
+                            "movementSpeed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current movement speed value."
+                            },
+                            "networth": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Sum of the player's current gold balance and prices of owned items."
+                            },
+                            "playerName": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player name."
+                            },
+                            "position": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "properties": {
+                                    "x": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    },
+                                    "z": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    }
+                                },
+                                "title": "Position",
+                                "description": "The current or last known position of the player's hero."
+                            },
+                            "references": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "patternProperties": {
+                                    "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                                        "type": "string"
+                                    }
+                                },
+                                "description": "Reference IDs of the player in external services."
+                            },
+                            "reliableGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current amount of the player's reliable gold."
+                            },
+                            "respawnTimeRemaining": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Seconds until the killed hero respawns at the fountain or resurrects in place, if item like Aegis of the Immortal was used."
+                            },
+                            "roshanKills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of times the player killed Roshan."
+                            },
+                            "runesPickedUp": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total number of runes the player picked up."
+                            },
+                            "strength": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current strength value."
+                            },
+                            "towerKills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of towers the player destroyed during the game."
+                            },
+                            "unreliableGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current amount of the player's unreliable gold."
+                            },
+                            "visibleByEnemy": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "description": "Indicates whether the player's hero is currently visible by enemies."
+                            },
+                            "visionDaytime": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero vision rate during the daytime phase."
+                            },
+                            "visionNighttime": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero vision rate during the nighttime phase."
+                            },
+                            "xp": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero experience."
+                            }
+                        },
+                        "title": "PlayerInfo",
+                        "description": "List of team players."
+                    }
+                },
+                "references": {
+                    "type": [
+                        "object",
+                        "null"
+                    ],
+                    "patternProperties": {
+                        "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                            "type": "string"
+                        }
+                    },
+                    "description": "Reference IDs of the team in external services."
+                },
+                "reliableGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of reliable gold of all team members."
+                },
+                "roshanKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of times the team members killed Roshan during the game."
+                },
+                "shrineKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of shrines the team members destroyed during the game."
+                },
+                "towerKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of towers the team members destroyed during the game."
+                },
+                "unreliableGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of unreliable gold of all team members."
+                }
+            },
+            "title": "TeamInfo",
+            "description": "Information about dire team."
+        },
+        "endedAt": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "UTC time and date when the game (map) ended (only for finished games)."
+        },
+        "gameOver": {
+            "type": "boolean",
+            "description": "Indicates whether the current game is finished."
+        },
+        "gameTime": {
+            "type": "integer",
+            "description": "The ingame clock's time in milliseconds."
+        },
+        "matchStatus": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "matchState": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "enum": [
+                                "INITIALIZING",
+                                "LOADING",
+                                "HERO_SELECTION",
+                                "STRATEGY_TIME",
+                                "PRE_GAME",
+                                "IN_PROGRESS",
+                                "POST_GAME",
+                                "DISCONNECT",
+                                "TEAM_SHOWCASE",
+                                "CUSTOM_SETUP",
+                                "PAUSE_SCREEN",
+                                "UNKNOWN"
+                            ],
+                            "title": "MatchState"
+                        }
+                    ],
+                    "description": "Current match phase, e.g. HERO_SELECTION, IN_PROGRESS."
+                },
+                "paused": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "description": "Indicates whether the match is currently paused."
+                }
+            },
+            "title": "MatchStatus",
+            "description": "Information about current match status."
+        },
+        "radiant": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "barracksKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of barracks the team members destroyed during the game."
+                },
+                "bestKillStreak": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The highest kill streak value achieved among the team members during the game so far."
+                },
+                "creepKillGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of gold the team members earned for killing creeps."
+                },
+                "faction": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "enum": [
+                                "RADIANT",
+                                "DIRE",
+                                "UNKNOWN"
+                            ],
+                            "title": "Faction"
+                        }
+                    ],
+                    "description": "The team faction, e.g. RADIANT, DIRE."
+                },
+                "heroKillGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of gold the team members earned for killing heroes."
+                },
+                "heroKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of heroes the team members killed during the game."
+                },
+                "killStreak": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "The highest current kill streak value among the team members."
+                },
+                "liveDataUrn": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The team reference URN."
+                },
+                "mapWins": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of times the team won the game in current match series."
+                },
+                "players": {
+                    "description": "List of team players.",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "abilities": {
+                                "description": "List of the player's abilities.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "abilId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Ability internal ID."
+                                        },
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the ability cooldown."
+                                        },
+                                        "lastUsedAt": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "The ingame clock's time in milliseconds of when the ability was last used."
+                                        },
+                                        "level": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Current ability level."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Ability name."
+                                        }
+                                    },
+                                    "title": "AbilityState",
+                                    "description": "List of the player's abilities."
+                                }
+                            },
+                            "agility": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current agility value."
+                            },
+                            "alive": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "description": "Indicates whether the player's hero is currently alive."
+                            },
+                            "assists": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of assists the player performed during the game."
+                            },
+                            "bestKillStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's best kill streak during the game."
+                            },
+                            "bkbChargesUsed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "buybackCooldown": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Absolute Game time when buyback is next available.",
+                                "deprecated": true
+                            },
+                            "buybackCooldownRemaining": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Seconds until buyback becomes available."
+                            },
+                            "buybackCost": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current buyback cost of the player's hero."
+                            },
+                            "buybackLastUsed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "creepKillGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player earned for killing creeps."
+                            },
+                            "deaths": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of times the player died during the game."
+                            },
+                            "denies": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of denies the player performed during the game."
+                            },
+                            "goldCurrent": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current gold balance."
+                            },
+                            "goldEarned": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player had earned during the game."
+                            },
+                            "healingDone": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total number of times the player healed."
+                            },
+                            "health": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current health value."
+                            },
+                            "healthMax": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero max health value."
+                            },
+                            "healthRegen": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero health regen rate."
+                            },
+                            "heroId": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero internal ID."
+                            },
+                            "heroKillGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total amount of gold the player earned for killing heroes."
+                            },
+                            "heroName": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player's hero name."
+                            },
+                            "intelligence": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current intelligence value."
+                            },
+                            "itemNeutral": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "properties": {
+                                    "cooldownUntil": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ],
+                                        "description": "Number of seconds remaining until the item cooldown."
+                                    },
+                                    "itemId": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "description": "Internal item ID."
+                                    },
+                                    "meta": {
+                                        "type": [
+                                            "object",
+                                            "null"
+                                        ],
+                                        "additionalProperties": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "name": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "description": "Item name."
+                                    }
+                                },
+                                "title": "ItemState",
+                                "description": "Information about neutral item the player has currently equipped."
+                            },
+                            "itemsBackpack": {
+                                "description": "List of items the player currently has in their backpack.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their backpack."
+                                }
+                            },
+                            "itemsBear": {
+                                "description": "This field is currently unused.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "This field is currently unused."
+                                }
+                            },
+                            "itemsInventory": {
+                                "description": "List of items the player currently has in their inventory.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their inventory."
+                                }
+                            },
+                            "itemsStash": {
+                                "description": "List of items the player currently has in their stash.",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cooldownUntil": {
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ],
+                                            "description": "Number of seconds remaining until the item cooldown."
+                                        },
+                                        "itemId": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "description": "Internal item ID."
+                                        },
+                                        "meta": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "name": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ],
+                                            "description": "Item name."
+                                        }
+                                    },
+                                    "title": "ItemState",
+                                    "description": "List of items the player currently has in their stash."
+                                }
+                            },
+                            "killStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current kill streak."
+                            },
+                            "kills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of enemy hero kills the player performed during the game."
+                            },
+                            "lastHitStreak": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's current last hit streak."
+                            },
+                            "lastHits": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of last hits the player performed during the game."
+                            },
+                            "level": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current level."
+                            },
+                            "liveDataUrn": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player reference URN."
+                            },
+                            "magicResist": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current magic resist value."
+                            },
+                            "mana": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current mana value."
+                            },
+                            "manaMax": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero max mana value."
+                            },
+                            "manaRegen": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero mana regen rate."
+                            },
+                            "movementSpeed": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero current movement speed value."
+                            },
+                            "networth": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Sum of the player's current gold balance and prices of owned items."
+                            },
+                            "playerName": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "description": "The player name."
+                            },
+                            "position": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "properties": {
+                                    "x": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    },
+                                    "z": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ]
+                                    }
+                                },
+                                "title": "Position",
+                                "description": "The current or last known position of the player's hero."
+                            },
+                            "references": {
+                                "type": [
+                                    "object",
+                                    "null"
+                                ],
+                                "patternProperties": {
+                                    "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                                        "type": "string"
+                                    }
+                                },
+                                "description": "Reference IDs of the player in external services."
+                            },
+                            "reliableGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current amount of the player's reliable gold."
+                            },
+                            "respawnTimeRemaining": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "Seconds until the killed hero respawns at the fountain or resurrects in place, if item like Aegis of the Immortal was used."
+                            },
+                            "roshanKills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of times the player killed Roshan."
+                            },
+                            "runesPickedUp": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Total number of runes the player picked up."
+                            },
+                            "strength": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "description": "The player's hero current strength value."
+                            },
+                            "towerKills": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Number of towers the player destroyed during the game."
+                            },
+                            "unreliableGold": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Current amount of the player's unreliable gold."
+                            },
+                            "visibleByEnemy": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "description": "Indicates whether the player's hero is currently visible by enemies."
+                            },
+                            "visionDaytime": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero vision rate during the daytime phase."
+                            },
+                            "visionNighttime": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero vision rate during the nighttime phase."
+                            },
+                            "xp": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "The player's hero experience."
+                            }
+                        },
+                        "title": "PlayerInfo",
+                        "description": "List of team players."
+                    }
+                },
+                "references": {
+                    "type": [
+                        "object",
+                        "null"
+                    ],
+                    "patternProperties": {
+                        "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                            "type": "string"
+                        }
+                    },
+                    "description": "Reference IDs of the team in external services."
+                },
+                "reliableGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of reliable gold of all team members."
+                },
+                "roshanKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of times the team members killed Roshan during the game."
+                },
+                "shrineKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of shrines the team members destroyed during the game."
+                },
+                "towerKills": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Number of towers the team members destroyed during the game."
+                },
+                "unreliableGold": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Total amount of unreliable gold of all team members."
+                }
+            },
+            "title": "TeamInfo",
+            "description": "Information about radiant team."
+        },
+        "radiantNetworthAdvantage": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "Difference between radiant and dire teams networths (sum of gold balance and owned items prices of all players)."
+        },
+        "references": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "patternProperties": {
+                "^(UNKNOWN|RIOT_ESPORTS_ID|RIOT_ACCOUNT_ID|RIOT_SUMMONER_ID|ESL_ID|STEAM_ID|STEAM_ID_3|STEAM_ID_64|VALVE_DOTA_TEAM_ID|VALVE_DOTA_MATCH_ID)$": {
+                    "type": "string"
+                }
+            },
+            "description": "A list of external reference IDs for this match."
+        },
+        "roshanStatus": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "respawnTimeInMillis": {
+                    "type": "integer",
+                    "description": "Time until Roshan respawns in milliseconds if Roshan is not alive."
+                },
+                "roshanState": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "enum": [
+                                "ALIVE",
+                                "PHASE_ONE",
+                                "PHASE_TWO",
+                                "UNKNOWN"
+                            ],
+                            "title": "RoshanState"
+                        }
+                    ],
+                    "description": "Current Roshan state, e.g. ALIVE, PHASE_ONE."
+                }
+            },
+            "title": "RoshanStatus",
+            "description": "Information about current Roshan status."
+        },
+        "seriesStatus": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "perid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Match series reference PERID."
+                },
+                "seriesCurrent": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Current map number in the match series."
+                },
+                "seriesMax": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "description": "Maximum number of maps in this match series."
+                },
+                "seriesScores": {
+                    "type": [
+                        "object",
+                        "null"
+                    ],
+                    "additionalProperties": {
+                        "type": "integer"
+                    },
+                    "description": "Total team scores in this match series."
+                },
+                "seriesType": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string",
+                            "enum": [
+                                "BEST_OF",
+                                "ALL"
+                            ],
+                            "title": "SeriesType"
+                        }
+                    ],
+                    "description": "Type of the match series, e.g. BEST_OF."
+                }
+            },
+            "title": "SeriesStatus",
+            "description": "Information about current match series status."
+        },
+        "startedAt": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "UTC time and date when the game (map) started."
+        },
+        "winningTeamUrn": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Reference URN of the winning team, if available."
+        }
+    },
+    "title": "SNAPSHOT/MATCH/UPDATE",
+    "description": "This message is sent periodically (at most once per second). Match update snapshots are potentially rate-limited to 1 every 5 seconds, depending on the contract.",
+    "examples": [
+        {
+            "references": {
+                "VALVE_DOTA_MATCH_ID": "1039339301"
+            },
+            "matchStatus": {
+                "matchState": "IN_PROGRESS",
+                "paused": false
+            },
+            "seriesStatus": {
+                "perid": "esports:match:fa832de7-fb79-540b-c510-70c979889b08",
+                "seriesCurrent": 2,
+                "seriesMax": 3,
+                "seriesType": "BEST_OF",
+                "seriesScores": {
+                    "live:dota:carp:team:ae:8920139": 0,
+                    "live:dota:carp:team:ae:9371094": 1
+                }
+            },
+            "roshanStatus": {
+                "roshanState": "PHASE_ONE",
+                "respawnTimeInMillis": 192772
+            },
+            "startedAt": "2021-12-21T23:02:04.614406Z",
+            "endedAt": null,
+            "gameTime": 1497944,
+            "gameOver": false,
+            "winningTeamUrn": null,
+            "radiant": {
+                "liveDataUrn": "live:dota:carp:team:ae:9371094",
+                "faction": "RADIANT",
+                "references": {
+                    "VALVE_DOTA_TEAM_ID": "6790976"
+                },
+                "mapWins": 1,
+                "players": [
+                    {
+                        "liveDataUrn": "live:dota:carp:player:86269899999896268",
+                        "playerName": "player1",
+                        "references": {
+                            "STEAM_ID_64": "86269899999896268"
+                        },
+                        "heroName": "npc_dota_hero_wisp",
+                        "heroId": 91,
+                        "itemsInventory": [
+                            {
+                                "name": "item_magic_stick",
+                                "itemId": 34,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_urn_of_shadows",
+                                "itemId": 92,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_soul_ring",
+                                "itemId": 178,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_dust",
+                                "itemId": 40,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_vitality_booster",
+                                "itemId": 61,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_headdress",
+                                "itemId": 94,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_tpscroll",
+                                "itemId": 46,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsBackpack": [],
+                        "itemsStash": [],
+                        "itemsBear": [],
+                        "itemNeutral": {
+                            "name": "item_mysterious_hat",
+                            "itemId": 589,
+                            "meta": {},
+                            "cooldownUntil": 0
+                        },
+                        "abilities": [
+                            {
+                                "name": "wisp_tether",
+                                "abilId": 5485,
+                                "level": 4,
+                                "cooldownUntil": 8.1999855,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            }
+                        ],
+                        "position": {
+                            "x": 7322.0312,
+                            "y": 5753.9062,
+                            "z": 128
+                        },
+                        "level": 11,
+                        "alive": true,
+                        "kills": 0,
+                        "deaths": 3,
+                        "assists": 2,
+                        "lastHits": 13,
+                        "lastHitStreak": 0,
+                        "denies": 6,
+                        "goldCurrent": 834,
+                        "goldEarned": 4305,
+                        "networth": 4159,
+                        "xp": 6847,
+                        "healingDone": 4892,
+                        "runesPickedUp": 2,
+                        "buybackCost": 420,
+                        "roshanKills": 0,
+                        "buybackCooldown": 0,
+                        "buybackCooldownRemaining": null,
+                        "respawnTimeRemaining": null,
+                        "health": 1456,
+                        "healthMax": 1625,
+                        "healthRegen": 8.248932,
+                        "mana": 467,
+                        "manaMax": 579,
+                        "manaRegen": 3.4792137,
+                        "agility": 32.000004,
+                        "strength": 55,
+                        "intelligence": 42.000008,
+                        "buybackLastUsed": null,
+                        "bkbChargesUsed": null,
+                        "magicResist": 25,
+                        "movementSpeed": 320,
+                        "visionDaytime": 800,
+                        "visionNighttime": 0,
+                        "visibleByEnemy": false,
+                        "reliableGold": 834,
+                        "heroKillGold": 130,
+                        "creepKillGold": 184,
+                        "unreliableGold": 0,
+                        "towerKills": 1,
+                        "killStreak": null,
+                        "bestKillStreak": null
+                    }
+                ],
+                "heroKills": 6,
+                "towerKills": 2,
+                "barracksKills": 0,
+                "roshanKills": 1,
+                "shrineKills": null,
+                "reliableGold": 3627,
+                "unreliableGold": 4341,
+                "heroKillGold": 1891,
+                "creepKillGold": 15939,
+                "killStreak": 3,
+                "bestKillStreak": 3
+            },
+            "dire": {
+                "liveDataUrn": "live:dota:carp:team:ae:8920139",
+                "faction": "DIRE",
+                "references": {
+                    "VALVE_DOTA_TEAM_ID": "2709072"
+                },
+                "mapWins": 0,
+                "players": [
+                    {
+                        "liveDataUrn": "live:dota:carp:player:09669098089096690",
+                        "playerName": "player2",
+                        "references": {
+                            "STEAM_ID_64": "09669098089096690"
+                        },
+                        "heroName": "npc_dota_hero_winter_wyvern",
+                        "heroId": 91,
+                        "itemsInventory": [
+                            {
+                                "name": "item_ring_of_basilius",
+                                "itemId": 88,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_ward_observer",
+                                "itemId": 42,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_boots",
+                                "itemId": 29,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_witch_blade",
+                                "itemId": 534,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            },
+                            {
+                                "name": "item_wind_lace",
+                                "itemId": 244,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsBackpack": [
+                            {
+                                "name": "item_smoke_of_deceit",
+                                "itemId": 188,
+                                "meta": {},
+                                "cooldownUntil": 0
+                            }
+                        ],
+                        "itemsStash": [],
+                        "itemsBear": [],
+                        "itemNeutral": {
+                            "name": "item_grove_bow",
+                            "itemId": 288,
+                            "meta": {},
+                            "cooldownUntil": 0
+                        },
+                        "abilities": [
+                            {
+                                "name": "abyssal_underlord_portal_warp",
+                                "abilId": 842,
+                                "level": 1,
+                                "cooldownUntil": 0,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            },
+                            {
+                                "name": null,
+                                "abilId": null,
+                                "level": null,
+                                "cooldownUntil": null,
+                                "lastUsedAt": null,
+                                "meta": {}
+                            }
+                        ],
+                        "position": {
+                            "x": 4213.1875,
+                            "y": 9799.156,
+                            "z": 128
+                        },
+                        "level": 13,
+                        "alive": true,
+                        "kills": 0,
+                        "deaths": 3,
+                        "assists": 7,
+                        "lastHits": 34,
+                        "lastHitStreak": 0,
+                        "denies": 1,
+                        "goldCurrent": 151,
+                        "goldEarned": 5175,
+                        "networth": 4226,
+                        "xp": 9541,
+                        "healingDone": 938,
+                        "runesPickedUp": 3,
+                        "buybackCost": 426,
+                        "roshanKills": 0,
+                        "buybackCooldown": 0,
+                        "buybackCooldownRemaining": null,
+                        "respawnTimeRemaining": null,
+                        "health": 1071,
+                        "healthMax": 1300,
+                        "healthRegen": 5.7689896,
+                        "mana": 578,
+                        "manaMax": 1071,
+                        "manaRegen": 5.627781,
+                        "agility": 36.40001,
+                        "strength": 55.19999,
+                        "intelligence": 83.19999,
+                        "buybackLastUsed": null,
+                        "bkbChargesUsed": null,
+                        "magicResist": 25,
+                        "movementSpeed": 285,
+                        "visionDaytime": 800,
+                        "visionNighttime": 0,
+                        "visibleByEnemy": false,
+                        "reliableGold": 150,
+                        "heroKillGold": 445,
+                        "creepKillGold": 656,
+                        "unreliableGold": 1,
+                        "towerKills": 0,
+                        "killStreak": null,
+                        "bestKillStreak": null
+                    }
+                ],
+                "heroKills": 12,
+                "towerKills": 3,
+                "barracksKills": 0,
+                "roshanKills": 0,
+                "shrineKills": null,
+                "reliableGold": 1257,
+                "unreliableGold": 3013,
+                "heroKillGold": 4830,
+                "creepKillGold": 17519,
+                "killStreak": 4,
+                "bestKillStreak": 4
+            },
+            "daytime": true,
+            "radiantNetworthAdvantage": -3122
+        }
+    ],
+    "$id": "http://schemas.bayesesports.com/live_data/dota/dota2_bayes_carp/snapshot/match/update"
+}
